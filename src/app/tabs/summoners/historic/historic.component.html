@@ -1,1 +1,25 @@
-<p>historic works!</p>
+<mat-card class="summoner-historic">
+  <mat-card-header>
+    <div class="summoner-icon" matBadge="225" matBadgeColor="warn">
+      <img class="summoner-icon-img" src="../../../../assets/img/profileIcon18.jpg">
+    </div>
+    <span class="summoner-name">
+      <!--{{name}}--> NikoFLK
+    </span>
+    <app-doughnut-chart style="width:50%;"></app-doughnut-chart><br>
+  </mat-card-header>
+  <button mat-raised-button color="warn"> Live Game</button>
+
+  <mat-card-content>
+    <mat-accordion class="historic" *ngFor="let game of games">
+      <mat-expansion-panel [ngStyle]="{'background-color': (game.status == true) ? '#A3CFEC' : '#E2B6B3'}">
+        <mat-expansion-panel-header [ngStyle]="{'background-color': (game.status == true) ? '#A3CFEC' : '#E2B6B3'}">
+          <mat-panel-title>
+            {{game.id}}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>{{game.summonerName}}</p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </mat-card-content>
+</mat-card>

@@ -1,1 +1,27 @@
-<p>rank works!</p>
+<mat-card class="summoner-rank">
+  <mat-card-header>
+    <div class="summoner-icon" matBadge="225" matBadgeColor="warn">
+      <img class="summoner-icon-img" src="../../../../assets/img/profileIcon18.jpg">
+    </div>
+    <span class="summoner-name">
+      <!--{{name}}--> NikoFLK
+    </span>
+    <app-doughnut-chart style="width:50%;"></app-doughnut-chart><br>
+  </mat-card-header>
+  <button mat-raised-button color="warn"> Live Game</button>
+
+  <mat-card-content>
+    <mat-tab-group class="tabs-ranked">
+      <mat-tab *ngFor="let season of seasons" label="{{season.name}}" class="tabs-ranked-{{season.name}}">
+        <app-seasons-ranked></app-seasons-ranked>
+      </mat-tab>
+    </mat-tab-group>
+
+    <mat-tab-group class="tabs-draft">
+      <mat-tab *ngFor="let season of seasons" label="{{season.name}}" class="tabs-draft-{{season.name}}">
+        <app-seasons-draft></app-seasons-draft>
+      </mat-tab>
+    </mat-tab-group>
+
+  </mat-card-content>
+</mat-card>

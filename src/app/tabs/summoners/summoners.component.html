@@ -1,13 +1,32 @@
-<mat-tab-group mat-stretch-tabs *ngIf="isLogged">
-  <mat-tab label="Historic">
-    <app-historic></app-historic>
-  </mat-tab>
+<mat-card class="summoners-card">
 
-  <mat-tab label="Rank">
-    <app-rank></app-rank>
-  </mat-tab>
+  <div class="search-bar">
+    <mat-form-field class="region">
+      <mat-label>Région</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let region of regions" [value]="region.value">
+          {{region.value}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="summ-name">
+      <mat-label>Summoners Name</mat-label>
+      <input matInput>
+    </mat-form-field>
+    <button  mat-icon-button><mat-icon class="search-icon">search</mat-icon></button>
+  </div>
 
-  <mat-tab label="Champions">
-    <app-champions></app-champions>
-  </mat-tab>
-</mat-tab-group>
+  <mat-tab-group class="summoners-tabs" mat-stretch-tabs *ngIf="isLogged">
+    <mat-tab label="Historic" class="summoner-tab">
+      <app-historic></app-historic>
+    </mat-tab>
+
+    <mat-tab label="Rank" class="summoner-tab">
+      <app-rank></app-rank>
+    </mat-tab>
+
+    <mat-tab label="Champions" class="summoner-tab">
+      <app-champions></app-champions>
+    </mat-tab>
+  </mat-tab-group>
+</mat-card>

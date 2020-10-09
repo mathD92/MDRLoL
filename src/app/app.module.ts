@@ -13,9 +13,16 @@ import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input'
+import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
-;
+import { MatCardModule } from '@angular/material/card';
+import { MatSelectModule } from '@angular/material/select';
+import { MatBadgeModule } from '@angular/material/badge';
+import { ChartsModule } from 'ng2-charts';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatTableModule } from '@angular/material/table';
+import {CdkTableModule} from '@angular/cdk/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 import { AppComponent } from './app.component';
@@ -27,9 +34,11 @@ import { HistoricComponent } from './tabs/summoners/historic/historic.component'
 import { RankComponent } from './tabs/summoners/rank/rank.component';
 import { ChampionsComponent } from './tabs/summoners/champions/champions.component';
 import { ShellComponent } from './shell/shell.component';
+import { DoughnutChartComponent } from './tabs/doughnut-chart/doughnut-chart.component';
 import { ToolbaarComponent, ToolbarDialogDisconnect, ToolbarDialogConnect, ToolbarDialogInscription } from './shell/toolbaar/toolbaar.component';
-import { FormsComponent } from './shell/forms/forms.component';
-
+import { SeasonsRankedComponent } from './tabs/summoners/rank/seasons-ranked/seasons-ranked.component';
+import { SeasonsDraftComponent } from './tabs/summoners/rank/seasons-draft/seasons-draft.component';
+import { ChampionsTableComponent } from './tabs/summoners/champions/champions-table/champions-table.component';
 
 @NgModule({
   declarations: [
@@ -43,10 +52,13 @@ import { FormsComponent } from './shell/forms/forms.component';
     ChampionsComponent,
     ShellComponent,
     ToolbaarComponent,
-    FormsComponent,
     ToolbarDialogDisconnect,
     ToolbarDialogConnect,
-    ToolbarDialogInscription
+    ToolbarDialogInscription,
+    DoughnutChartComponent,
+    SeasonsRankedComponent,
+    SeasonsDraftComponent,
+    ChampionsTableComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +74,16 @@ import { FormsComponent } from './shell/forms/forms.component';
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    MatCardModule,
+    MatSelectModule,
+    MatBadgeModule,
+    ChartsModule,
+    MatExpansionModule,
+    MatTableModule,
+    CdkTableModule,
+    MatPaginatorModule,
+
   ],
   providers: [],
   entryComponents: [

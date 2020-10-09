@@ -1,0 +1,38 @@
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="games">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Games </th>
+    <td mat-cell *matCellDef="let element"> {{element.games}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="kda">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> kda </th>
+    <td mat-cell *matCellDef="let element"> {{element.kda}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="cs">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> CS </th>
+    <td mat-cell *matCellDef="let element"> {{element.cs}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="quad">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Quadruplés </th>
+    <td mat-cell *matCellDef="let element"> {{element.quad }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="pentakills">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Pentakills </th>
+    <td mat-cell *matCellDef="let element"> {{element.pentakills}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+</mat-table>
+
+<mat-paginator class="paginator" [pageSize]=5 showFirstLastButtons></mat-paginator>

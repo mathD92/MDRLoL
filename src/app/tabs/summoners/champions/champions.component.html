@@ -1,1 +1,19 @@
-<p>champions works!</p>
+<mat-card class="summoner-champions">
+  <mat-card-header>
+    <div class="summoner-icon" matBadge="225" matBadgeColor="warn">
+      <img class="summoner-icon-img" src="../../../../assets/img/profileIcon18.jpg">
+    </div>
+    <span class="summoner-name">
+      <!--{{name}}--> NikoFLK
+    </span>
+    <app-doughnut-chart style="width:50%;"></app-doughnut-chart><br>
+  </mat-card-header>
+  <button mat-raised-button color="warn"> Live Game</button>
+
+  <mat-card-content>
+    <mat-tab-group class="tabs-champions">
+      <mat-tab *ngFor="let season of seasons" label="{{season.name}}" class="tabs-ranked-{{season.name}}">
+        <app-champions-table></app-champions-table>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card-content>

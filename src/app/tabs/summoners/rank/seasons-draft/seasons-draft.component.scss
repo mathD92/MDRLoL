@@ -1,0 +1,29 @@
+.gnee{
+  background-color: #83ABDB;
+  width:100%;
+}
+.grid-container {
+  display: inline-grid;
+  grid-template-columns: 30% 30% 30%;
+}
+.grid-item {
+  text-align: center;
+  position: relative;
+}
+.text{
+  color:#FECF66;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.ranked-icon{
+  max-width:100%;
+}
+.doughnut-chart{
+  width:200%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
