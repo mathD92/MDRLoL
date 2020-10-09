@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>Inscription</h1>
+<div mat-dialog-content>
+  <mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="a@a.a">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Password</mat-label>
+    <input matInput placeholder="******">
+  </mat-form-field>  <mat-form-field class="example-full-width">
+    <mat-label>Confirm Password</mat-label>
+    <input matInput placeholder="******">
+  </mat-form-field>
+  <button mat-button (click)="onNoClick()">J'ai déjà un compte</button>
+
+
+  <div mat-dialog-actions>
+    <button mat-button color="primary">Inscription</button>
+  </div>
+
+</div>

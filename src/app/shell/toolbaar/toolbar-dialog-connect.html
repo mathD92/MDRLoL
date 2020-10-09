@@ -1,0 +1,18 @@
+<h1 mat-dialog-title>Connexion</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="a@a.a" [(ngModel)]="this.data.name">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input matInput placeholder="******">
+  </mat-form-field><br>
+  <button mat-button>Mot de passe oublié ?</button>
+  <button mat-button (click)="onNoClick()">Je n'ai pas de compte</button>
+
+  <div mat-dialog-actions>
+    <button mat-button color="primary" [mat-dialog-close]="this.data" (click)="onConfirm()">Connexion</button>
+  </div>
+
+</div>

@@ -9,6 +9,13 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input'
+import { FormsModule } from '@angular/forms';
+;
 
 
 import { AppComponent } from './app.component';
@@ -20,8 +27,8 @@ import { HistoricComponent } from './tabs/summoners/historic/historic.component'
 import { RankComponent } from './tabs/summoners/rank/rank.component';
 import { ChampionsComponent } from './tabs/summoners/champions/champions.component';
 import { ShellComponent } from './shell/shell.component';
-import { ToolbaarComponent } from './shell/toolbaar/toolbaar.component';
-import { SidebarComponent } from './shell/sidebar/sidebar.component';
+import { ToolbaarComponent, ToolbarDialogDisconnect, ToolbarDialogConnect, ToolbarDialogInscription } from './shell/toolbaar/toolbaar.component';
+import { FormsComponent } from './shell/forms/forms.component';
 
 
 @NgModule({
@@ -36,7 +43,10 @@ import { SidebarComponent } from './shell/sidebar/sidebar.component';
     ChampionsComponent,
     ShellComponent,
     ToolbaarComponent,
-    SidebarComponent
+    FormsComponent,
+    ToolbarDialogDisconnect,
+    ToolbarDialogConnect,
+    ToolbarDialogInscription
   ],
   imports: [
     BrowserModule,
@@ -47,8 +57,17 @@ import { SidebarComponent } from './shell/sidebar/sidebar.component';
     MatSidenavModule,
     MatIconModule,
     MatButtonModule,
+    MatListModule,
+    MatMenuModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule
   ],
   providers: [],
+  entryComponents: [
+    ToolbaarComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

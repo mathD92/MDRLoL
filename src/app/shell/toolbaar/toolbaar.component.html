@@ -1,5 +1,22 @@
+<p>
   <mat-toolbar>
-    <button mat-icon-button color="primary">
+
+    <button mat-icon-button [matMenuTriggerFor]="menu">
       <mat-icon>menu</mat-icon>
     </button>
+
+    <mat-menu #menu="matMenu">
+      <button *ngIf="!isLogged" mat-menu-item (click)="openDialogConnect()">Connexion</button>
+      <button *ngIf="!isLogged" mat-menu-item (click)="openDialogInscription()">Inscription</button>
+      <button *ngIf="isLogged" mat-menu-item (click)="openDialogDisconnect()">Déconnexion</button>
+    </mat-menu>
+
+    <span>MDR <p *ngIf="name">de {{name}}</p></span>
+    <span class="spacer"></span>
+
+    <div class="small-logo">
+      <img src="../../../assets/img/logo.svg">
+    </div>
+
   </mat-toolbar>
+</p>
