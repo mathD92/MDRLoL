@@ -29,7 +29,6 @@ import { MatSortModule } from '@angular/material/sort';
 import { AppComponent } from './app.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { SummonersComponent } from './tabs/summoners/summoners.component';
-import { GamesComponent } from './tabs/games/games.component';
 import { TournamentsComponent } from './tabs/tournaments/tournaments.component';
 import { HistoricComponent } from './tabs/summoners/historic/historic.component';
 import { RankComponent } from './tabs/summoners/rank/rank.component';
@@ -46,7 +45,6 @@ import { ChampionsTableComponent } from './tabs/summoners/champions/champions-ta
     AppComponent,
     TabsComponent,
     SummonersComponent,
-    GamesComponent,
     TournamentsComponent,
     HistoricComponent,
     RankComponent,
