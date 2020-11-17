@@ -21,8 +21,9 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { ChartsModule } from 'ng2-charts';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTableModule } from '@angular/material/table';
-import {CdkTableModule} from '@angular/cdk/table';
-import {MatPaginatorModule} from '@angular/material/paginator';
+import { CdkTableModule } from '@angular/cdk/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 
 import { AppComponent } from './app.component';
@@ -83,7 +84,7 @@ import { ChampionsTableComponent } from './tabs/summoners/champions/champions-ta
     MatTableModule,
     CdkTableModule,
     MatPaginatorModule,
-
+    MatSortModule
   ],
   providers: [],
   entryComponents: [

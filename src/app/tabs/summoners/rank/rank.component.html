@@ -11,12 +11,14 @@
   <button mat-raised-button color="warn"> Live Game</button>
 
   <mat-card-content>
+    <h1 class="tabs-ranked-title">Ranked 2v2</h1>
     <mat-tab-group class="tabs-ranked">
       <mat-tab *ngFor="let season of seasons" label="{{season.name}}" class="tabs-ranked-{{season.name}}">
         <app-seasons-ranked></app-seasons-ranked>
       </mat-tab>
     </mat-tab-group>
 
+    <h1 class="tabs-ranked-title">Ranked Flex</h1>
     <mat-tab-group class="tabs-draft">
       <mat-tab *ngFor="let season of seasons" label="{{season.name}}" class="tabs-draft-{{season.name}}">
         <app-seasons-draft></app-seasons-draft>

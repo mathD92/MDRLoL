@@ -18,10 +18,18 @@
   margin:1px;
 }
 .tabs-ranked{
-  margin-top:1rem;
   background-color: #83ABDB;
 }
 .tabs-draft{
-  margin-top:1rem;
   background-color: #83ABDB;
+}
+.tabs-ranked-title{
+  background-color: #83ABDB;
+  margin-top: 1rem;
+  margin-bottom: -1rem;
+  width:50%;
+  max-width: 200px;
+  text-align: center;
+  height:50px;
+  color:#FECF66;
 }

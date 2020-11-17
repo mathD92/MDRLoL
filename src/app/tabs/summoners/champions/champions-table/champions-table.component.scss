@@ -1,8 +1,12 @@
 .mat-elevation-z8{
   background-color: #7DA3D0;
   width:100%!important;
-}
+  display: table;
 
+}
+.round{
+  border-radius:100%;
+}
 .paginator{
   background-color: #7DA3D0;
 }

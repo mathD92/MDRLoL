@@ -6,10 +6,8 @@
 }
 
 .search-bar{
-  border-radius: 5%;
   width:80%;
   text-align: center;
-  background-color: #ffffff;
   margin:0 auto;
 }
 
@@ -20,4 +18,8 @@
 .summ-name{
   margin-left:1%;
   width: 50%;
+}
+
+::ng-deep .mat-form-field-underline {
+  display: none!important;
 }
