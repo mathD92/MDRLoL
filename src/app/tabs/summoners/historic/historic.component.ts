@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
 
 export interface Game {
   id: string;
@@ -22,7 +23,7 @@ export class HistoricComponent implements OnInit {
     {id: '6', summonerName: 'Pierre', status: true},
   ];
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
   }

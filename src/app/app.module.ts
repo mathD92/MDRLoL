@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -39,6 +40,7 @@ import { ToolbaarComponent, ToolbarDialogDisconnect, ToolbarDialogConnect, Toolb
 import { SeasonsRankedComponent } from './tabs/summoners/rank/seasons-ranked/seasons-ranked.component';
 import { SeasonsDraftComponent } from './tabs/summoners/rank/seasons-draft/seasons-draft.component';
 import { ChampionsTableComponent } from './tabs/summoners/champions/champions-table/champions-table.component';
+import { AlertComponent } from './alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -57,11 +59,13 @@ import { ChampionsTableComponent } from './tabs/summoners/champions/champions-ta
     DoughnutChartComponent,
     SeasonsRankedComponent,
     SeasonsDraftComponent,
-    ChampionsTableComponent
+    ChampionsTableComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     MatTabsModule,
     BrowserAnimationsModule,
     MatToolbarModule,
